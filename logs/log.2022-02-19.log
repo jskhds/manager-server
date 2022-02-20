@@ -1,0 +1,16 @@
+[2022-02-19T22:42:57.789] [ERROR] error - ReferenceError: ctx is not defined
+    at D:\.vscode\Projects\backstageSystem\manager-server\app.js:29:3
+    at dispatch (D:\.vscode\Projects\backstageSystem\manager-server\node_modules\koa-compose\index.js:42:32)
+    at views (D:\.vscode\Projects\backstageSystem\manager-server\node_modules\koa-views\src\index.js:91:12)
+    at dispatch (D:\.vscode\Projects\backstageSystem\manager-server\node_modules\koa-compose\index.js:42:32)
+    at serve (D:\.vscode\Projects\backstageSystem\manager-server\node_modules\koa-static\index.js:53:15)
+    at async logger (D:\.vscode\Projects\backstageSystem\manager-server\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (D:\.vscode\Projects\backstageSystem\manager-server\node_modules\koa-bodyparser\index.js:95:5)
+[2022-02-19T22:43:26.826] [ERROR] error - ReferenceError: ctx is not defined
+    at D:\.vscode\Projects\backstageSystem\manager-server\app.js:29:3
+    at dispatch (D:\.vscode\Projects\backstageSystem\manager-server\node_modules\koa-compose\index.js:42:32)
+    at views (D:\.vscode\Projects\backstageSystem\manager-server\node_modules\koa-views\src\index.js:91:12)
+    at dispatch (D:\.vscode\Projects\backstageSystem\manager-server\node_modules\koa-compose\index.js:42:32)
+    at serve (D:\.vscode\Projects\backstageSystem\manager-server\node_modules\koa-static\index.js:53:15)
+    at async logger (D:\.vscode\Projects\backstageSystem\manager-server\node_modules\koa-logger\index.js:67:7)
+    at async bodyParser (D:\.vscode\Projects\backstageSystem\manager-server\node_modules\koa-bodyparser\index.js:95:5)
