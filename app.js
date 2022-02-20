@@ -12,6 +12,8 @@ const users = require('./routes/users')
 // error handler
 onerror(app)
 
+// 数据库
+require('./config/db')
 // middlewares
 app.use(bodyparser({
   enableTypes:['json', 'form', 'text']
