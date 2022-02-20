@@ -1,3 +1,5 @@
 # Logs
 logs
 node_modules
+
+logs/*           //忽略log下的所有文件
