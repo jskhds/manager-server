@@ -75,6 +75,18 @@ router.get('/list', async (ctx) => {
   }
 })
 
+
+// 获取全部用户列表(用于作为部门管理时的负责人选择)
+router.get('/all/list', async (ctx) => {
+  try {
+    const list = await User.find({}, "userId userName userEmail")
+    ctx.body = util.success(list)
+  } catch (error) {
+    ctx.body = util.fail(error.stack)
+  }
+})
+
+
 // 用户删除/批量删除 删除用 post 请求
 router.post('/delete', async (ctx) => {
   // 待删除的用户Id数组

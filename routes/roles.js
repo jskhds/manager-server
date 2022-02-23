@@ -25,6 +25,7 @@
    try {
      let params = {}
      if (roleName) params.roleName = roleName;
+    //  query 是 Role.find 返回的 promise 对象
      const query = Role.find(params)
      const list = await query.skip(skipIndex).limit(page.pageSize)
      const total = await Role.countDocuments(params);
@@ -77,7 +78,7 @@
  router.post('/update/permission', async (ctx) => {
    const { _id, permissionList } = ctx.request.body;
    try {
-     let params = { permissionList}
+     let params = { permissionList, update: new Date() }
      let res = await Role.findByIdAndUpdate(_id, params)
      ctx.body = util.success('', "权限设置成功")
    } catch (error) {
