@@ -17,7 +17,7 @@ router.get('/list', async (ctx) => {
     const permissionList = util.getTreeMenu(rootList, null, [])
     ctx.body = util.success(permissionList);
 })
-// 递归拼接菜单的树形列表
+ 
 
 // 菜单编辑、删除、新增功能
 router.post('/operate', async (ctx) => {
