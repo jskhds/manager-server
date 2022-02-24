@@ -100,9 +100,9 @@ router.post('/delete', async (ctx) => {
   // User.updateMany({ $or: [{ userId: 10001 }, { userId: 10002 }] })
   // 更新多个：用 in 比较方便，把状态改为2 （我们实现软删除，只是把状态改为离职，实际上数据还是在的）
   const res = await User.updateMany({ userId: { $in: userIds } }, { state: 2 })
-  console.log(res)
+  // console.log(res)
   if (res.matchedCount) {
-    console.log(res.matchedCount);
+    // console.log(res.matchedCount);
     ctx.body = util.success(res, `共删除成功${res.matchedCount}条`)
     return;
   }

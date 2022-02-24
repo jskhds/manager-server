@@ -5,7 +5,7 @@
 const mongoose = require('mongoose');
 const config = require('./index')
 const log4js = require('./../utils/log4j')
-main().catch(err => console.log(err));
+main().catch(err => console.log("error",err));
 
 async function main() {
   await mongoose.connect('mongodb://localhost:27017/managerDatabase');
