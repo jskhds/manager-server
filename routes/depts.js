@@ -24,6 +24,8 @@ router.get('/list', async (ctx) => {
 
 
 // 递归拼接树形列表
+// 第一次遍历：先获取一级菜单，也就是外面的根菜单，
+// 然后去遍历一级菜单，依次进行，中间传递的是上一级菜单的 id
 function getTreeDept(rootList, id, list) {
    for (let i = 0; i < rootList.length; i++) {
        let item = rootList[i]

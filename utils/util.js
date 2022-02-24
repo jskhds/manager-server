@@ -1,6 +1,7 @@
 /**
  * 通用工具函数封装
  */
+const jwt = require("jsonwebtoken")
  const log4js = require('./log4j')
  const CODE = {
      SUCCESS: 200,
@@ -50,7 +51,7 @@
          }
      }, 
      CODE,
-      // 递归拼接树形列表 需要好好理解
+      // 递归拼接树 形成列表 需要好好理解
     getTreeMenu(rootList, id, list) {
         for (let i = 0; i < rootList.length; i++) {
             let item = rootList[i]
@@ -70,4 +71,13 @@
         })
         return list;
     },
+    // token 解密函数
+    decoded(authorization){
+        if(authorization){
+            let token = authorization.split(" ")[1];
+            return jwt.verify(token,"tokenSecret");
+          }
+          return '';
+
+    }
  }
